@@ -1,18 +1,29 @@
-# Basic Python Classes and Objects
-# Class is a Blueprint using which we shall create objects
-class Dog:
-    #constructor
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+# Abstract Base Classes (ABCs)
+# Dominos Pizza Company(ABC) 
+    # Templates:
+        # How the interiors? 
+        # What should be your menu?
+        # Ingredients to be used
+        # Uniform/dress code the employees
 
-    # Method - function that belongs to the class
-    def bark(self):
-        return f"{self.name} says woof! and it is {self.age} years old"
+# Airoli
+# Inherit Dominos Pizza Company
 
-# Create object
-my_dog = Dog("Jerry",3)
-my_dog2 = Dog("Perry",4)
+# Example without ABC
+# Base class
+class Shape:
+    def area(self):
+        pass
 
-print(my_dog.bark())
-print(my_dog2.bark())
+    def perimeter(self):
+        pass
+# Child class
+class Circle(Shape):
+    def __init__(self,radius):
+        self.radius = radius
+
+    def perimeter(self):
+        return 2*3.14*self.radius
+    
+circle = Circle(5)
+print(circle.area())
